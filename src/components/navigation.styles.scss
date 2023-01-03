@@ -1,0 +1,187 @@
+.navigation {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 11;
+
+    &:after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+        transition: .2s;
+        height: 160px;
+        opacity: .9;
+        background: linear-gradient(to bottom, rgba(20,26,50,1) 1%,rgba(20,26,50,0) 100%);
+        box-shadow: none;
+    }
+
+    .nav-links-container1 {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+
+        .logo-container {
+            margin-right: 3rem;
+
+            img {
+                vertical-align: middle;
+                //padding: 25px;
+            }
+        }
+
+        .nav-link1 {
+            padding: 10px 0px;
+            cursor: pointer;
+            color: white;
+            margin-right: 2.5rem;
+
+            &:hover {
+                color: #007AFF;
+            }
+
+        }
+
+        .fa-angle-down {
+            font-size: .75rem;
+            margin-left: 0.35rem;
+            color: #007AFF;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-style: normal;
+        }
+
+    }
+
+    .nav-links-container2 {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .Search {
+            position: relative;
+
+            .Form-Icon {
+                position: relative;
+                padding: 0;
+                display: block;
+
+                .input {
+                    border: 2px solid rgba(61, 79, 145, .5);
+                    background-color: rgba(8, 15, 40, .5);
+                    color: #8DA0BC;
+                    padding: 0.25rem 1rem;
+                    border-radius: 2rem;
+                    line-height: calc(2rem - 2px);
+                    width: 11.5rem;
+                    font: inherit;
+                
+                .input::-ms-clear {display: none; width:0; height:0;} //to remove “X” icon from search input field
+
+                    &:focus {
+                        border-color:  #3D4F91;
+                        width: 14rem;
+                        outline: 0;
+                    }
+                }
+
+                button {
+                    background-color: transparent !important;
+                    padding: 0;
+                    position: absolute;
+                    right: 0;
+                    top: -4px;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    padding-right: 0.5rem;
+                    color: #007AFF;
+                    border: 0;
+                    cursor: pointer;
+                    font-family: Arial;
+                    font-weight: 900;
+                    font-style: normal;
+                }
+            }
+        }
+
+        .nav-link2 {
+            padding: 0.25rem 1rem;
+            background-color: transparent;
+            color: #fff;
+            font: inherit;
+            border: 0;
+            cursor: pointer;
+            line-height: 2rem;
+
+            &:hover {
+                animation: zoom 300ms ease-in;
+                //background-color: yellow;
+            }
+            
+
+            @keyframes zoom {
+                0% {
+                  transform: scale(1);
+                }
+                50% {
+                  transform: scale(1.07);
+                }
+                100% {
+                  transform: scale(1);
+                }
+        
+            }
+
+        }
+
+        .button {
+            border: 0;
+            cursor: pointer;
+            padding: 0.25rem 1rem;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            line-height: 2rem;
+            //width: auto;
+            border-radius: 3rem;
+            color: #fff;
+            background-color: #007AFF;
+            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            
+                &:hover {
+                    animation: zoom 300ms ease-in;
+                    //background-color: yellow;
+                }
+                
+    
+                @keyframes zoom {
+                    0% {
+                      transform: scale(1);
+                    }
+                    50% {
+                      transform: scale(1.07);
+                    }
+                    100% {
+                      transform: scale(1);
+                    }
+                }
+        }
+    }
+}

@@ -1,0 +1,215 @@
+.directory-item-container {
+    width: 182px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid white;
+    margin: 0 7.5px 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+    // border: 1px solid white;
+
+
+    &:hover {
+        img {
+            opacity: 0.5;
+        }
+
+        .footer {
+            .name {
+                color: #007AFF;
+            }
+        }
+
+        .card-info-container {
+            display: flex;
+            opacity: 1;
+
+        }
+    }
+
+    .fa-play {
+        width: 3.75rem;
+        height: 3.75rem;
+        line-height: 3.75rem;
+        // text-align: center;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 1;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        color: #fff;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .Year {
+        position: absolute;
+        bottom: 50px;
+        right: 0.5rem;
+        z-index: 3;
+        font-size: .75rem;
+        font-weight: 700;
+        background-color: #007AFF;
+        padding: 0 0.5rem;
+        line-height: 1.2rem;
+        border-radius: 1rem;
+        color: #fff;
+    }
+
+
+    img {
+        width: 100%;
+        height: 85%;
+        object-fit: cover;
+        margin-bottom: 5px;
+        border-radius: 5px;
+
+    }
+
+    .footer {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        font-size: .875rem;
+        //border: 1px solid white;
+
+
+        .name {
+            width: 95%;
+            //margin-bottom: 15px;
+            text-align: center;
+            color: #fff;
+
+        }
+    }
+
+
+    .card-info-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #080F28;
+        overflow: hidden;
+        z-index: 11;
+        border-radius: 5px;
+        display: none;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        padding: 10px;
+
+        p { 
+            margin: 0;
+            padding: 0;
+          }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(15px);
+            -webkit-filter: blur(15px);
+            opacity: .5;
+            z-index: 1;
+            transform: scale(1.3);
+            border-radius: 5px;
+        }
+
+        .body {
+            // height: 90px;
+            padding: 0 15px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            //align-items: center;
+            position: absolute;
+            margin-left: -10px;
+            z-index: 2;
+
+
+            .title {
+                //position: relative;
+                font-weight: 700;
+                //text-align: center;
+                font-size: 1rem;
+                color: #fff;
+                line-height: 1.5;
+                margin-bottom: 0.5rem;
+
+            }
+
+            .Info {
+                font-size: .875rem;
+                margin-bottom: 0.5rem;
+                color: #8DA0BC;
+                text-align: left;
+                // padding-top: 0.5rem;
+
+                .vote {
+                    font-size: 1.125rem;
+                    color: #EDB709;
+                    display: inline-block;
+                    vertical-align: baseline;
+                    margin-right: 0.5rem;
+                }
+
+                .release-date {
+                    margin-right: 0.5rem;
+                }
+
+                .quality {
+                    color: #1A1818;
+                    background-color: #EDB709;
+                    font-size: 0.65rem;
+                    font-weight: 700;
+                    height: 1.125rem;
+                    padding: 0 0.3rem;
+                    line-height: 1rem;
+                    border-radius: 1rem;
+                }
+            }
+
+            .description {
+                color: #8DA0BC;
+                height: 48%;
+                //margin-bottom: 0.5rem;
+                text-align: justify;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 7; /* number of lines to show */
+                -webkit-box-orient: vertical;
+                white-space: normal;
+            }
+
+            .genre {
+                text-align: justify;
+                color: #8DA0BC;
+
+                .genre1 {
+                    color: #fff;
+                }
+
+            }
+
+        }
+    }
+}
